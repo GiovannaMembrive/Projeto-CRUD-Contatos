@@ -1,0 +1,32 @@
+<div class="container py-4">
+
+  <h2 class="mb-4 text-center fw-bold">Grupos</h2>
+
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <input type="text" class="form-control w-50" placeholder="Pesquisar grupo...">
+    <button class="btn btn-pink ms-3" routerLink="/grupos/novo">+ Criar Grupo</button>
+  </div>
+
+  <div class="list-group">
+    <div
+      *ngFor="let g of grupos; let i = index"
+      class="list-group-item group-item d-flex justify-content-between align-items-center"
+      [ngClass]="i % 2 === 0 ? 'group-1' : 'group-2'"
+    >
+      <div class="fw-semibold">{{ g.name }}</div>
+
+      <div>
+        <button class="btn btn-outline-secondary btn-sm me-2" (click)="edit(g)">Editar</button>
+        <button class="btn btn-outline-danger btn-sm" (click)="delete(g.id!)">Excluir</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<app-grupo-edit-modal
+  *ngIf="grupoSelecionado"
+  [grupo]="grupoSelecionado"
+  (close)="closeModal($event)">
+</app-grupo-edit-modal>
+

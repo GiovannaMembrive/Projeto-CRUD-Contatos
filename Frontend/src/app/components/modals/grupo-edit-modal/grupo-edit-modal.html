@@ -1,0 +1,19 @@
+<div class="modal-overlay">
+  <div class="modal-content">
+
+    <h4 class="mb-3">Editar Grupo</h4>
+
+    <form [formGroup]="form">
+
+      <label class="form-label">Nome do grupo *</label>
+      <input type="text" class="form-control mb-3" formControlName="name">
+
+      <div class="d-flex gap-2 justify-content-end">
+        <button class="btn btn-secondary" (click)="fechar()" type="button">Cancelar</button>
+        <button class="btn btn-primary" (click)="salvar()" type="button">Salvar</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,36 @@
+/* Container geral do modal */
+.modal-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 999; /* fundo + modal ficam acima do app */
+}
+
+/* O fundo escurecido e borrado */
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.034);
+  backdrop-filter: blur(4px);
+  z-index: 1; /* atrás do modal */
+}
+
+/* O modal em si */
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.25);
+  z-index: 10; /* na frente do backdrop */
+}
+
+.modal-title {
+  color: #ff81ab;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+

@@ -1,0 +1,73 @@
+<div class="container py-4">
+
+  <h2 class="mb-4 text-center fw-bold">Meus Contatos</h2>
+
+  <!-- Barra de busca + botão adicionar -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <input 
+      type="text" 
+      class="form-control w-50"
+      placeholder="Pesquisar contato..."
+      [(ngModel)]="searchTerm"
+      (input)="filtrar()"
+    >
+    <button class="btn btn-pink ms-3" routerLink="/contatos/novo">+ Adicionar Contato</button>
+  </div>
+
+  <!-- Lista de contatos -->
+  <div class="row g-3">
+
+    <!-- Loop dos contatos filtrados -->
+    <div class="col-md-4" *ngFor="let contato of contatosFiltrados">
+      <div class="card shadow-sm contact-card">
+        <div class="card-body">
+
+          <h5 class="card-title">{{ contato.name }}</h5>
+
+          <p class="card-text mb-1">
+            <strong>Email:</strong> {{ contato.email }}
+          </p>
+
+          <p class="card-text mb-3">
+            <strong>Telefone:</strong> {{ contato.phone }}
+          </p>
+
+          <p class="card-text mb-3">
+            <strong>Endereço:</strong> {{ contato.adress }}
+          </p>
+
+          <p class="card-text mb-3">
+            <strong>Comentário:</strong> {{ contato.description }}
+          </p>
+
+          <p><strong>Grupo:</strong> {{ contato.grupo?.name || 'Sem grupo' }}</p>
+
+
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-outline-secondary btn-sm"
+                    (click)="edit(contato)">
+              Editar
+            </button>
+
+            <button class="btn btn-outline-danger btn-sm"
+                    (click)="delete(contato.id)">
+              Excluir
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div><!-- row -->
+
+  <!-- 🩷 MODAL DE EDIÇÃO DE CONTATO -->
+  <app-contato-edit-modal
+      *ngIf="contatoSelecionado"
+      [contato]="contatoSelecionado"
+      [grupos]="grupos"
+      (closed)="closeModal($event)">
+  </app-contato-edit-modal>
+
+</div><!-- container -->
+

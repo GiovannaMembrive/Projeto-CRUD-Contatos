@@ -1,0 +1,33 @@
+<div class="container py-4">
+  <div class="col-md-6 mx-auto">
+
+    <div class="card shadow-sm">
+      <div class="card-header">
+        <h5 class="mb-0">Novo Grupo</h5>
+      </div>
+
+      <div class="card-body">
+
+        <form [formGroup]="formGroupGrupo" (ngSubmit)="save()">
+
+          <div class="mb-3">
+            <label class="form-label">Nome *</label>
+            <input 
+              type="text" 
+              class="form-control" 
+              formControlName="name"
+              placeholder="Digite o nome do grupo">
+          </div>
+
+          <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <button class="btn btn-secondary" routerLink="/grupos">Cancelar</button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>
