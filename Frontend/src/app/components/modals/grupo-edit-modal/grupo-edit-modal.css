@@ -13,9 +13,9 @@
   backdrop-filter: blur(2px);
 }
 
-/* Caixa do modal */
+/* caixa do modal */
 .modal-content {
-  background: #ffffff; /* rosa clarinho */
+  background: #ffffff;
   padding: 25px;
   border-radius: 14px;
   width: 380px;

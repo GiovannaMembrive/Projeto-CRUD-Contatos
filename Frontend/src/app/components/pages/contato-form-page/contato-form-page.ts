@@ -30,7 +30,7 @@ export class ContatoFormPage implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       adress: ['', [Validators.required]],
       description: [''],
-      grupo: [null, Validators.required] // recebe OBJETO Grupo
+      grupo: [null, Validators.required] // recebe objeto Grupo
     });
 
     this.loadGrupos();

@@ -14,7 +14,7 @@ public class ContatoMapper {
         p.setEmail(request.email());
         p.setAdress(request.adress());
         p.setDescription(request.description());
-        // grupo será setado no service, usando request.grupoId
+        
         return p;
     }
 
