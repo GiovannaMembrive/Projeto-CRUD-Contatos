@@ -16,3 +16,9 @@ VALUES ('Beatriz Almeida', '11977774444', 'beatriz.almeida@example.com', 'Rua do
 
 INSERT INTO TBL_CONTATOS (NAME, PHONE, EMAIL, ADRESS, DESCRIPTION, GRUPO_ID)
 VALUES ('Marcos Couto', '11966665555', 'marcos.couto@example.com', 'Rua Central 78', 'Colega da faculdade', 4);
+
+INSERT INTO TBL_CONTATOS (NAME, PHONE, EMAIL, ADRESS, DESCRIPTION, GRUPO_ID)
+VALUES ('Thay', '11966665544', 'thay.fernanda@example.com', 'Rua Marte 34', 'Best da faculdade', 4);
+
+INSERT INTO TBL_CONTATOS (NAME, PHONE, EMAIL, ADRESS, DESCRIPTION, GRUPO_ID)
+VALUES ('Giugiu', '11966678844', 'giu.sbrissa@example.com', 'Rua Jacare 101', 'Best da faculdade', 4);

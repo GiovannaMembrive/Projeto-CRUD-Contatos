@@ -1,21 +1,17 @@
-/* Fundo da navbar */
 .navbar {
-  background-color: #f793c3 !important; /* rosa clarinho */
+  background-color: #f793c3 !important; 
 }
 
-/* Links da navbar */
 .navbar .nav-link,
 .navbar-brand {
-  color: #ffffff !important; /* texto branco */
+  color: #ffffff !important;
 }
 
-/* Link ativo */
 .navbar .nav-link.active {
-  color: #6a004e !important; /* rosa escuro */
+  color: #6a004e !important; 
   font-weight: bold;
 }
 
-/* Ícone do menu */
 .navbar-toggler {
   border-color: #6a004e !important;
 }
@@ -67,8 +63,6 @@
   transform: translateY(-4px);
 }
 
-
-/* Linhas intercaladas rosinha/branco */
 .group-item {
   padding: 14px 18px;
   border: none;
@@ -76,22 +70,21 @@
   margin-bottom: 10px;
 }
 
-/* Alternância */
-.group-1 { background-color: #ffffff; }
-.group-2 { background-color: #ffcedd; }
+.group-1 { background-color: #ffffff; 
+  box-shadow: 0 4px 25px rgba(0,0,0,0.025);}
+.group-2 { background-color: #ffe7f4; 
+  box-shadow: 0 4px 25px rgba(0,0,0,0.025);}
 
-/* Hover leve */
+
 .group-item:hover {
   transform: translateX(4px);
   transition: 0.2s ease;
 }
 
-/* Fonte mais fofinha */
 .group-item .fw-semibold {
   font-size: 1.1rem;
 }
 
-/* 🌸 ESTILO ROSA FOFO (GLOBAL) 🌸 */
 
 .card {
   border: 2px solid #ffd4dd !important;
@@ -125,7 +118,6 @@ label.form-label {
   box-shadow: 0 0 0 0.15rem rgba(212, 119, 146, 0.25) !important;
 }
 
-/* Botão secundário (Cancelar) */
 .btn-secondary {
   background-color: #ffffff !important;
   border-color: #ff66b3 !important;
